@@ -9,8 +9,9 @@ if [ ! -d /.composer ]; then
 fi
 
 npm install
+npm run prod
 composer install
-php artisan migrate
+php artisan migrate --force
 chmod -R ugo+rw /.composer
 
 if [ ! -z "$PORT" ]; then
