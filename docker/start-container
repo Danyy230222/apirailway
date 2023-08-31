@@ -8,8 +8,6 @@ if [ ! -d /.composer ]; then
     mkdir /.composer
 fi
 
-npm install
-npm run prod
 composer install
 php artisan migrate --force
 chmod -R ugo+rw /.composer
